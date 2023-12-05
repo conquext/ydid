@@ -1,0 +1,9 @@
+{
+  "name": "@ydid/tests",
+  "private": "true",
+  "version": "0.0.0",
+  "dependencies": {
+    "units": "jest",
+    "e2e": "jest"
+  }
+}

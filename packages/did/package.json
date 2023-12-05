@@ -1,0 +1,8 @@
+{
+  "name": "@ydid/did",
+  "private": "true",
+  "version": "0.0.0",
+  "scripts": {
+    "script": "tsc index.ts && node index"
+  }
+}
