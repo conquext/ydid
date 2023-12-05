@@ -1,0 +1,9 @@
+packages:
+  - "./@app/*"
+  - "./packages/*"
+  # - "ydid-instance"
+  # - "ydid-network"
+  # - "ydid-protocol"
+  # - "ydid-postgres"
+  # - "ydid-repos"
+  # - "ydid-tests"
