@@ -1,7 +1,7 @@
 packages:
   - './@app/*'
   - './packages/*'
-  - './tests'
+  # - './tests'
   # - "ydid-instance"
   # - "ydid-network"
   # - "ydid-protocol"

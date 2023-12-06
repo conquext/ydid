@@ -3,7 +3,7 @@
   "private": "true",
   "version": "0.0.0",
   "scripts": {
-    "script": "tsc index.ts && node index"
+    "script": "nodemon index.ts"
   },
   "dependencies": {
     "@web5/api": "^0.8.2",
