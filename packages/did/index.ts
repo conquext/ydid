@@ -1,2 +1,2 @@
-export * from './DidManager';
+// export * from './DidManager';
 export * from './scripts';
