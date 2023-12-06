@@ -7,6 +7,8 @@
     "client": "pnpm --filter @ydid/client",
     "instance": "pnpm --filter @ydid/instance",
     "lib": "pnpm --filter @ydid/ui-lib",
+    "did": "pnpm --filter @ydid/did",
+    "test": "pnpm --filter @ydid/tests",
     "dev": "pnpm --recursive --parallel --stream run dev"
   },
   "keywords": [],

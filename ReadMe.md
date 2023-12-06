@@ -48,5 +48,3 @@ To deploy the apps to Kubernetes using DevSpace, run:
 `devspace use namespace ydid`
 
 `devspace dev`
-
-For more details and explanations, please watch the YouTube videos.

@@ -1,0 +1,12 @@
+{
+  "name": "@ydid/did",
+  "private": "true",
+  "version": "0.0.0",
+  "scripts": {
+    "script": "tsc index.ts && node index"
+  },
+  "dependencies": {
+    "@web5/api": "^0.8.2",
+    "@web5/dids": "^0.2.2"
+  }
+}
