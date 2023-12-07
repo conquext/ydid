@@ -1,45 +1,6 @@
 import { SCHEMA_TLD } from '../constants';
 import { schemas } from './common';
 
-// const permissionSet = (_attribute: string) => {
-//   const permissionStruct = {
-//     $actions: [
-//       {
-//         who: 'anyone',
-//         can: 'read',
-//       },
-//       {
-//         who: 'author',
-//         can: 'write',
-//         of: 'data',
-//       },
-//     ],
-//   };
-
-//   return permissionStruct;
-// };
-
-// export const usernameProtocolDefinition = {
-//   protocol: `${SCHEMA_TLD}`,
-//   published: true,
-//   types: {
-//     data: {
-//       schema: schemas.usernameSchema,
-//       dataFormats: ['application/json'],
-//     },
-//   },
-//   structure: {
-//     data: {
-//       $action: permissionSet('data'),
-//       username: permissionSet('username'),
-//       firstname: permissionSet('firstname'),
-//       lastname: permissionSet('lastname'),
-//       othernames: permissionSet('othernames'),
-//       usertype: permissionSet('usertype'),
-//     },
-//   },
-// };
-
 export const permissionSet = (_attribute: string) => {
   const permissionStruct = {
     $actions: [
