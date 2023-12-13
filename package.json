@@ -6,6 +6,7 @@
   "scripts": {
     "client": "pnpm --filter @ydid/client",
     "instance": "pnpm --filter @ydid/instance",
+    "user": "pnpm --filter @ydid/user",
     "lib": "pnpm --filter @ydid/ui-lib",
     "did": "pnpm --filter @ydid/did",
     "test": "pnpm --filter @ydid/tests",

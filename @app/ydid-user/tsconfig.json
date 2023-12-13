@@ -20,18 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "references": [
-    {
-      "path": "@app/ydid-client"
-    },
-    {
-      "path": "@app/ydid-instance"
-    },
-    {
-      "path": "@app/ydid-user"
-    },
-    {
-      "path": "packages/ui-lib"
-    }
-  ]
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
