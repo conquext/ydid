@@ -37,6 +37,7 @@ export default defineConfig(({ mode }) => {
     plugins: [react(), dts()],
     build: {
       outDir: 'build',
+      // entry: path.resolve(__dirname, 'src/main.tsx'),
       assetsDir: 'assets',
       emptyOutDir: true,
     },
