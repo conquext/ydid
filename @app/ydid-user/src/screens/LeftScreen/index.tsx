@@ -14,6 +14,8 @@ import { CopyIcon } from '@chakra-ui/icons';
 import { DidManager } from '@ydid/did/DidManager';
 import { useState } from 'react';
 import useSessionData from '../../data/useSessionData';
+import DataSection from './DataSection';
+import ProtocolSection from './ProtocolSection';
 
 export default function LeftScreen() {
   const { data } = useSessionData();
@@ -186,6 +188,11 @@ export function DWNSection() {
           </Button>
         )}
       </Box>
+
+      <Divider w="100%" bg="#000" />
+      <DataSection />
+      <Divider w="100%" bg="#000" />
+      <ProtocolSection />
     </div>
   );
 }
