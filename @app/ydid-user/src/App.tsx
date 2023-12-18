@@ -1,12 +1,17 @@
-import { Fragment, useState } from 'react';
 import SplitPane from 'react-split-pane';
 import './App.css';
-import reactLogo from './assets/react.svg';
 import LeftScreen from './screens/LeftScreen';
 import RightScreen from './screens/RightScreen';
 import viteLogo from '/vite.svg';
 
-import { ChakraBaseProvider, HStack, extendBaseTheme } from '@chakra-ui/react';
+import {
+  Box,
+  ChakraBaseProvider,
+  HStack,
+  extendBaseTheme,
+} from '@chakra-ui/react';
+import { AppProvider } from './context/AppContext';
+import { NormalizeStyles } from './styles/base';
 
 const theme = extendBaseTheme({
   components: {
@@ -18,57 +23,31 @@ const theme = extendBaseTheme({
   },
 });
 
-const newLayout = 2 + 2 === 4;
-
 function App() {
-  const [count, setCount] = useState(0);
+  return (
+    <ChakraBaseProvider theme={theme}>
+      <NormalizeStyles />
 
-  if (newLayout) {
-    return (
-      <ChakraBaseProvider theme={theme}>
-        <Fragment>
-          <TopNav />
+      <AppProvider>
+        <Box minH={'100vh'}>
+          <Box w="100%" mb="1rem">
+            <TopNav />
+          </Box>
 
           <SplitPane split="vertical" minSize={50} defaultSize="50%">
-            <div style={{ backgroundColor: '#e0e0e0', padding: '20px' }}>
-              {/* Content for the left pane */}
+            {/* <Box p="20px" bg="#e0e0e0" h="100%"> */}
+            <Box p="20px" bg="#ffddca" h="100%">
               <LeftScreen></LeftScreen>
-            </div>
-            <div style={{ backgroundColor: '#f0f0f0', padding: '20px' }}>
-              {/* Content for the right pane */}
+            </Box>
+            <Box p="20px" bg="#f0f0f0" h="100%">
               <RightScreen></RightScreen>
-            </div>
+            </Box>
           </SplitPane>
 
           <HStack></HStack>
-        </Fragment>
-      </ChakraBaseProvider>
-    );
-  }
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Your, yDiD Instance</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+        </Box>
+      </AppProvider>
+    </ChakraBaseProvider>
   );
 }
 
@@ -80,7 +59,13 @@ const TopNav = () => {
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
       </div>
-      <h1>yDiD, Your Decentralized identity Manager</h1>
+      <Box
+        as="p"
+        fontSize={{ sm: '0.75rem', md: '1rem', lg: '0.85rem' }}
+        fontWeight={{ sm: '700rem', md: '600rem', lg: '500rem' }}
+      >
+        yDiD, Your Decentralized identity Manager
+      </Box>
       <div className="card"></div>
     </HStack>
   );
