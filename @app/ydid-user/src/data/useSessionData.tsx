@@ -1,20 +1,15 @@
 import { useAppContext } from '../context/AppContext';
 
 export default function useSessionData() {
-  const { state } = useAppContext();
+  const { state, dispatch } = useAppContext();
 
-  //   const handleLogin = () => {
-  //     // Simulate a login action
-  //     const user = { id: 1, username: 'example', email: 'example@example.com' };
-  //     dispatch({ type: 'LOGIN', user });
-  //   };
-
-  //   const handleLogout = () => {
-  //     // Simulate a logout action
-  //     dispatch({ type: 'LOGOUT' });
-  //   };
+  const setData = (data: Record<string, any>) => {
+    // Simulate a logout action
+    dispatch({ type: 'UPDATE_DATA', payload: { didSession: data } });
+  };
 
   return {
     data: state.didSession,
+    setData,
   };
 }

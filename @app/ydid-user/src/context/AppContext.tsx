@@ -15,7 +15,7 @@ interface AppState {
   didSession: R;
 }
 
-type AppAction = { type: 'UPDATE_DATA'; payload: string };
+type AppAction = { type: 'UPDATE_DATA'; payload: Partial<AppState> };
 
 interface AppContextType {
   state: AppState;
@@ -31,7 +31,7 @@ const reducer = (state: AppState, action: AppAction): AppState => {
     case 'UPDATE_DATA':
       return {
         ...state,
-        data: action.payload,
+        ...action.payload,
       };
     default:
       return state;

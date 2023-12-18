@@ -35,8 +35,8 @@ function App() {
           </Box>
 
           <SplitPane split="vertical" minSize={50} defaultSize="50%">
-            {/* <Box p="20px" bg="#e0e0e0" h="100%"> */}
-            <Box p="20px" bg="#ffddca" h="100%">
+            <Box p="20px" bg="#e0e0e0" h="100%">
+              {/* <Box p="20px" bg="#ffddca" h="100%"> */}
               <LeftScreen></LeftScreen>
             </Box>
             <Box p="20px" bg="#f0f0f0" h="100%">
@@ -59,13 +59,14 @@ const TopNav = () => {
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
       </div>
-      <Box
-        as="p"
+      <h1>yDiD, Your Decentralized identity Manager</h1>
+      {/* <Box
+        as="h1"
         fontSize={{ sm: '0.75rem', md: '1rem', lg: '0.85rem' }}
         fontWeight={{ sm: '700rem', md: '600rem', lg: '500rem' }}
       >
         yDiD, Your Decentralized identity Manager
-      </Box>
+      </Box> */}
       <div className="card"></div>
     </HStack>
   );

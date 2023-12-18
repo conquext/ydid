@@ -10,10 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@vitejs/plugin-react": "^4.2.1",
+    "@ydid/did": "workspace:^0.0.0",
+    "@ydid/ui-lib": "workspace:^0.0.0",
     "dotenv": "^16.3.1",
     "framer-motion": "^10.16.16",
     "react": "^18.2.0",
