@@ -2,9 +2,15 @@ import { useState } from 'react';
 import './App.css';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
+import { DidManager } '../../../packages/did/DidManager';
+
+
+const { web5, did: userDID } = await DidManager.connectWithCustomOption();
 
 function App() {
   const [count, setCount] = useState(0);
+
+  console.log(userDID)
 
   return (
     <>
