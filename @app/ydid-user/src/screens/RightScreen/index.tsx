@@ -1,39 +1,37 @@
 import {
+  Box,
+  Button,
   Flex,
+  FormControl,
   Heading,
   Input,
-  Button,
   InputGroup,
-  Stack,
   InputLeftElement,
-  Box,
-  FormControl,
-} from "@chakra-ui/react";
-
-
+  Stack,
+} from '@chakra-ui/react';
 
 export default function RightScreen() {
-
   return (
     <Flex
       flexDirection="column"
       width="100wh"
       height="100vh"
-   
-      backgroundColor="gray.200"
+      //   backgroundColor="gray.200"
       // justifyContent="center"
       alignItems="center"
     >
       <Stack
         flexDir="column"
         mb="2"
-        mt= "4"
+        mt="4"
         justifyContent="center"
         alignItems="center"
       >
-        <h1>Facebook</h1>
-        <Heading color="teal.400" size="2xl">Sign Up or Login</Heading>
-        <Box minW={{ base: "90%", md: "468px" }}>
+        <h1>Twita</h1>
+        <Heading color="teal.400" size="2xl">
+          Authenticate to continue
+        </Heading>
+        <Box minW={{ base: '90%', md: '468px' }}>
           <form>
             <Stack
               spacing={4}
@@ -43,25 +41,28 @@ export default function RightScreen() {
             >
               <FormControl>
                 <InputGroup>
-                  <InputLeftElement
-                    pointerEvents="none"
+                  <InputLeftElement pointerEvents="none" />
+                  <Input
+                    width="100%"
+                    padding="4"
+                    type="text"
+                    variant="outline"
+                    placeholder="enter your DID"
                   />
-                  <Input width='100%' padding='4'type="text"  variant='outline' placeholder="enter your DID" />
                 </InputGroup>
               </FormControl>
-             
+
               <Button
-                borderRadius={10}
+                borderRadius={4}
                 type="submit"
                 variant="solid"
                 color="white"
                 width="full"
-                bg='#9d326c'
+                bg="#9d326c"
                 cursor="pointer"
                 py={4}
-                
               >
-               Authentcate with yDID
+                Continue with yDID
               </Button>
             </Stack>
           </form>
@@ -69,5 +70,4 @@ export default function RightScreen() {
       </Stack>
     </Flex>
   );
-};
-
+}
